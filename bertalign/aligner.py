@@ -42,10 +42,6 @@ class Bertalign:
         src_lang = LANG.ISO[src_lang]
         tgt_lang = LANG.ISO[tgt_lang]
         
-        print("Source language: {}, Number of sentences: {}".format(src_lang, src_num))
-        print("Target language: {}, Number of sentences: {}".format(tgt_lang, tgt_num))
-
-        print("Embedding source and target text using {} ...".format(model.model_name))
         src_vecs, src_lens = model.transform(src_sents, max_align - 1)
         tgt_vecs, tgt_lens = model.transform(tgt_sents, max_align - 1)
 
